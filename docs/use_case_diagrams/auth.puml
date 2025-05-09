@@ -1,0 +1,33 @@
+@startuml Authentication Use Case Diagram
+
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+actor "Người dùng" as User
+actor "Hệ thống" as System
+
+rectangle "Xác thực" {
+  usecase "Đăng nhập" as UC1
+  usecase "Đăng ký" as UC2
+  usecase "Quên mật khẩu" as UC3
+  usecase "Xác thực email" as UC4
+  usecase "Đăng xuất" as UC5
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+
+System --> UC1
+System --> UC2
+System --> UC3
+System --> UC4
+System --> UC5
+
+UC1 <|-- UC4
+UC2 <|-- UC4
+
+@enduml 

@@ -1,0 +1,42 @@
+@startuml Trader App Overview Use Case Diagram
+
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+actor "Người dùng" as User
+actor "Hệ thống" as System
+
+rectangle "Trader App" {
+  usecase "Đăng nhập" as UC1
+  usecase "Đăng ký" as UC2
+  usecase "Quản lý Dashboard" as UC3
+  usecase "Quản lý Giao dịch" as UC4
+  usecase "Quản lý Phương pháp" as UC5
+  usecase "Quản lý Tâm lý" as UC6
+  usecase "Quản lý Thông tin" as UC7
+  usecase "Thống kê và Phân tích" as UC8
+  usecase "Tìm kiếm" as UC9
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+User --> UC6
+User --> UC7
+User --> UC8
+User --> UC9
+
+System --> UC1
+System --> UC2
+System --> UC3
+System --> UC4
+System --> UC5
+System --> UC6
+System --> UC7
+System --> UC8
+System --> UC9
+
+@enduml 

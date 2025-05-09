@@ -1,0 +1,56 @@
+@startuml Trading Psychology Use Case Diagram
+
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+actor "Người dùng" as User
+actor "Hệ thống" as System
+
+rectangle "Quản lý Tâm lý Giao dịch" {
+  usecase "Làm bài test tâm lý" as UC1
+  usecase "Xem kết quả phân tích" as UC2
+  usecase "Xem lịch sử test" as UC3
+  usecase "Xem lịch sử giao dịch" as UC4
+ 
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+
+
+System --> UC1
+System --> UC2
+System --> UC3
+System --> UC4
+
+
+UC1 <|-- UC2
+UC1 <|-- UC3
+
+
+note right of UC1
+  - Bài test đánh giá tâm lý
+  - Trả lời các câu hỏi
+  - Tính điểm và phân tích
+end note
+
+note right of UC2
+  - Phân tích kết quả test
+  - Đề xuất cải thiện
+  - Đánh giá rủi ro
+end note
+
+note right of UC3
+  - Xem lịch sử các bài test
+  - Theo dõi tiến triển
+end note
+
+note right of UC4
+  - Xem lịch sử giao dịch
+  - Phân tích hiệu suất
+end note
+
+@enduml 

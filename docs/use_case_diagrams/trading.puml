@@ -1,0 +1,40 @@
+@startuml Trading Use Case Diagram
+
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+actor "Người dùng" as User
+actor "Hệ thống" as System
+
+rectangle "Quản lý Giao dịch" {
+  usecase "Xem danh sách giao dịch" as UC1
+  usecase "Tạo giao dịch mới" as UC2
+  usecase "Chỉnh sửa giao dịch" as UC3
+  usecase "Hủy giao dịch" as UC4
+  usecase "Xem chi tiết giao dịch" as UC5
+  usecase "Lọc giao dịch" as UC6
+  usecase "Xuất báo cáo" as UC7
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+User --> UC6
+User --> UC7
+
+System --> UC1
+System --> UC2
+System --> UC3
+System --> UC4
+System --> UC5
+System --> UC6
+System --> UC7
+
+UC1 <|-- UC5
+UC1 <|-- UC6
+UC1 <|-- UC7
+
+@enduml 
